@@ -25,7 +25,7 @@ h3{
     font-weight: normal;
 }
 h4,h5{
-    font-size: 2.8rem;
+    font-size: 2.4rem;
 }
 a{
     color: white;
@@ -39,6 +39,12 @@ button{
     font-size: 1.7rem;
     border-radius: 1rem;
     cursor: pointer;
+    transition: background 0.5s ease-in-out;
+    transition: color 0.5 ease-in-out;
+}
+button:hover{
+    background: white;
+    color:#131c27;
 }
 
 /* Nav section with hero */
@@ -46,6 +52,8 @@ button{
 .main-head{
     background: #131c27;
     color: white;
+    position: sticky;
+    top: 0px;
 }
 nav
 {
@@ -72,7 +80,7 @@ nav ul{
 }
 
 .hero{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), 
+    background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), 
         url(./img/first.jpg);
     min-height: 90vh;
     background-repeat: no-repeat;
@@ -89,6 +97,151 @@ nav ul{
     padding: 5rem;
 }
 
+/* Locations Section */
+
+#locations{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), 
+        url(./img/second.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: center;
+}
+.locations-head{
+    width: 90%;
+    margin: auto;
+}
+.locations-head h2{
+    padding: 1rem 0rem;
+    font-size: 4rem;
+}
+.locations-head h3{
+    padding: 1rem 0rem;
+    font-size: 2.2rem;
+}
+
+/* Benefits Section */
+
+.benefits-head{
+    background: #131c27;
+    color: white;
+    min-height: 30vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.benefits-head h2{
+    font-size: 4rem;
+}
+.benefits-head h3{
+    padding: 1rem;
+    font-size: 2.2rem;
+}
+
+.cards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: #131c27;
+    color: white;
+    flex: 1 1 30rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 1rem;
+
+}
+
+.card img{
+    max-width: 15%;
+    margin: 2rem;
+}
+.card-icon{
+    background: white;
+}
+.card h4{
+    padding: 1.8rem;
+}
+.card p{
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Contact Section */
+
+#contact{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), transparent), 
+        url(./img/third.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper{
+    width: 60%;
+    background: rgba(19,28,39,0.7);
+    color: white;
+    border-radius: 2rem;
+}
+.form-head{
+    text-align: center;
+    padding: 4rem;
+}
+.name-form,
+.email-form{
+    padding: 3rem;
+    text-align: center;
+}
+.form-wrapper label{
+    margin: 0rem 3rem;
+}
+.form-wrapper button{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 6rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+.form-wrapper input{
+    padding: 1rem 3rem;
+}
+
+/* Footer Section */
+
+footer{
+    color: white;
+    background:#131c27;
+}
+.footer-wrapper{
+    display: flex;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+}
+
+
+/* Media Query */
+
 @media screen and (max-width: 933px) {
     html{
         font-size: 45%;
@@ -98,5 +251,14 @@ nav ul{
     }
     #logo{
         padding: 2rem;
+    }
+    .locations-head h2{
+       color: white;
+    }
+    .locations-head h3{
+        color: white;
+    }
+    .form-wrapper{
+        width: 90%;
     }
 }
